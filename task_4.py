@@ -21,14 +21,3 @@ class Employee:
 
     def salary(self):
         return self.get_hours() * self.__class__.hourly_payment
-    
-emp1 = Employee('Алексей Смирнов', hours=10, rest_days=0, email=None)
-
-# Вычислим количество часов
-print(f'Количество часов: {emp1.get_hours()}')  # Вернет явно установленные часы
-
-# Узнаем e-mail сотрудника
-print(f'Электронная почта: {emp1.get_email()}')  # Возвратит введённый email
-
-# Посмотрим зарплату сотрудника
-print(f'Заработная плата: {emp1.salary()} рублей')  # Подсчёт зарплаты
