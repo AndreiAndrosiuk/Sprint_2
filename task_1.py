@@ -6,7 +6,7 @@ class Case:
         self.expected_result = expected_result
 
     def print_test_case_info(self):
-        print(f"ID тест-кейса:  {self.test_case_id}"
+        print(f"ID тест-кейса: {self.test_case_id}"
               f"\nНазвание: {self.name}"
               f"\nОписание шага: {self.step_description}"
               f"\nОжидаемый результат: {self.expected_result}")
@@ -19,9 +19,16 @@ class ExtendedCase(Case): # напиши свой код здесь
 
     def print_test_case_info(self):
         super().print_test_case_info()
-        print(f"\nПредусловие: {self.precondition}"
+        print(f"Предусловие: {self.precondition}"
               f"\nОкружение: {self.enviroment}") 
         
-case = ExtendedCase("1", "Наличие кнопки принять", "1. Открыть вкладку приёма документов 2. Проверить наличие кнопки ",
-                    "Кнопка доступна", "Открыть сервис", "Яндекс Браузер")
+case = ExtendedCase(
+    "1", 
+    "Наличие кнопки принять", 
+    "1. Открыть вкладку приёма документов 2. Проверить наличие кнопки ",
+    "Кнопка доступна", 
+    "Открыть сервис", 
+    "Яндекс Браузер"
+    )
+
 case.print_test_case_info()         
